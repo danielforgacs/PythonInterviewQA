@@ -4,9 +4,9 @@ import sys
 
 # 01 ==========================================================================
 class Attr:
-# UPDATE HERE:
+    # UPDATE HERE:
     pass
-# ^^^
+    # ^^^
 
 class Klass:
     attr = Attr()
