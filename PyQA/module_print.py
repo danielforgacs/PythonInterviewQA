@@ -32,3 +32,10 @@ def f3():
 c1 = C1()
 c2 = C3()
 f3()
+
+
+
+if __name__ == '__main__':
+    print('J')
+    f3()
+
