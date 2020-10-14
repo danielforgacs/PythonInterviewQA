@@ -1,11 +1,14 @@
-# Update here:
+# 01 ==========================================================================
 class Attr:
+# UPDATE HERE:
     pass
+# ^^^
 
-# to make this work:
 class K:
     attr = Attr()
 
 k = K()
 
 assert isinstance(k.attr, int)
+
+# 02 ==========================================================================
