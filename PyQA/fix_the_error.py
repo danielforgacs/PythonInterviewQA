@@ -1,18 +1,21 @@
 import sys
 
+
+
 # 01 ==========================================================================
 class Attr:
 # UPDATE HERE:
     pass
 # ^^^
 
-class K:
+class Klass:
     attr = Attr()
 
-k = K()
+instance = Klass()
 
 try:
-    assert isinstance(k.attr, int)
+    assert isinstance(instance.attr, int)
+
 except Exception as error:
     print('[ERROR] line: {}, type: {}, msg: {}'.format(
         sys.exc_info()[2].tb_lineno, type(error), error))
@@ -22,6 +25,7 @@ except Exception as error:
 # 02 ==========================================================================
 try:
     assert (1 or 2) == None
+
 except Exception as error:
     print('[ERROR] line: {}, type: {}, msg: {}'.format(
         sys.exc_info()[2].tb_lineno, type(error), error))
@@ -31,6 +35,7 @@ except Exception as error:
 # 03 ==========================================================================
 try:
     assert 1 and 2 == None
+
 except Exception as error:
     print('[ERROR] line: {}, type: {}, msg: {}'.format(
         sys.exc_info()[2].tb_lineno, type(error), error))
