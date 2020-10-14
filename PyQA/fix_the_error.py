@@ -1,3 +1,5 @@
+import sys
+
 # 01 ==========================================================================
 class Attr:
 # UPDATE HERE:
@@ -11,18 +13,19 @@ k = K()
 
 try:
     assert isinstance(k.attr, int)
-except AssertionError as err:
-    print(err)
-    pass
+except Exception as error:
+    print('[ERROR] line: {}, type: {}, msg: {}'.format(
+        sys.exc_info()[2].tb_lineno, type(error), error))
 
 
 
 # 02 ==========================================================================
 try:
-    assert 1 or 2 == None
+    assert (1 or 2) == None
+
 except Exception as error:
-    print(error)
-    pass
+    print('[ERROR] line: {}, type: {}, msg: {}'.format(
+        sys.exc_info()[2].tb_lineno, type(error), error))
 
 
 
