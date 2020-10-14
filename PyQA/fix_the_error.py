@@ -22,7 +22,6 @@ except Exception as error:
 # 02 ==========================================================================
 try:
     assert (1 or 2) == None
-
 except Exception as error:
     print('[ERROR] line: {}, type: {}, msg: {}'.format(
         sys.exc_info()[2].tb_lineno, type(error), error))
@@ -33,7 +32,7 @@ except Exception as error:
 try:
     assert 1 and 2 == None
 except Exception as error:
-    print(error)
-    pass
+    print('[ERROR] line: {}, type: {}, msg: {}'.format(
+        sys.exc_info()[2].tb_lineno, type(error), error))
 
 
